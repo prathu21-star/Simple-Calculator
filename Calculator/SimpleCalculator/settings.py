@@ -43,7 +43,12 @@ ROOT_URLCONF = 'SimpleCalculator.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR , "templates"],
+        'DIRS': [
+            # Add the path to your template directory here.
+            # For example: '/home/Prathmesh7671/prathmesh7671.pythonanywhere.com/Calculator',
+            # Or if you have a 'templates' folder in your project directory:
+            # os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
