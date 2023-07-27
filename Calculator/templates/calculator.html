@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eae1ef; /* Background color mix of purple and pink */
+        }
+
+        .calculator-container {
+            background-color: #f5eddc;
+            text-align: center;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: 0 auto;
+            border-radius: 10px; /* Rounded corners for a 3D effect */
+        }
+
+        .calculator-container h1 {
+            margin: 0;
+            padding: 10px;
+            color: #993399; /* Purple color for the heading */
+        }
+
+        .calculator-container hr {
+            margin: 0;
+            border-color: #993399; /* Purple color for the horizontal rule */
+        }
+
+        .calculator-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .calculator-form label {
+            margin-bottom: 5px;
+        }
+
+        .calculator-form input[type="text"],
+        .calculator-form select,
+        .calculator-form button {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .calculator-form button {
+            background-color: #7412cf; /* Lighter pink color for the button */
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Shadow for 3D effect */
+            border: none;
+            border-radius: 30px;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
+    }
+
+            .calculator-form button:hover {
+                background-color: #f3e414; /* Darker pink color on hover */
+            }
+
+        
+
+        .calculator-form input[type="text"] {
+            width: 100%;
+            max-width: 200px;
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(45deg, #ffffff, #ffffff);
+        }
+
+        .calculator-container {
+            background-image: linear-gradient(45deg, #bad426, #5abdff);
+            text-align: center;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: 0 auto;
+            border-radius: 10px; /* Rounded corners for a 3D effect */
+        }
+
+        .calculator-container h1 {
+            margin: 0;
+            padding: 10px;
+            color: #993399; /* Purple color for the heading */
+        }
+
+        .calculator-container hr {
+            margin: 0;
+            border-color: #993399; /* Purple color for the horizontal rule */
+        }
+
+        .calculator-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .calculator-form label {
+            margin-bottom: 5px;
+        }
+
+        .calculator-form input[type="text"],
+        .calculator-form select,
+        .calculator-form button {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .calculator-form button {
+            background-color: #ffe600; /* Pink color for the button */
+            color: #000000;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .calculator-form button:hover {
+            background-color: #e60000; /* Lighter pink color on hover */
+        }
+
+        .calculator-form input[type="text"] {
+            width: 100%;
+            max-width: 200px;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 480px) {
+            .calculator-container {
+                max-width: 100%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator-container">
+        <h1>Simple Calculator</h1>
+        <hr>
+        <form class="calculator-form" method="post">
+            {% csrf_token %}
+            <label for="num1">Value 1:</label>
+            <input type="text" name="num1" value="{{ n1 }}">
+            <br>
+            <div class="operator-buttons">
+                <button type="button" value="+">+</button>
+                <button type="button" value="-">-</button>
+                <button type="button" value="*">*</button>
+                <button type="button" value="/">/</button>
+                <button type="button" value="%">%</button>
+                <button type="button" value="sqrt">√</button>
+            </div>
+            <br>
+            <label for="num2">Value 2:</label>
+            <input type="text" name="num2" value="{{ n2 }}">
+            <br>
+            <button type="submit">Calculate</button>
+            <br>
+            <label for="output">Output:</label>
+            <input type="text" name="output" value="{{ c }}">
+        </form>
+    </div>
+</body>
+
+</html>
+
+
+
+
+</html>
